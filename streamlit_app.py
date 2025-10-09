@@ -1,17 +1,31 @@
 import streamlit as st
 
-st.title('Streamlit Usage✨')
-st.code(code,language='python')
-st.header('In Media💿')
-st.subheader('📸Image:')
-st.image('itachi.jpg',caption = " itachi",width=700)
+# Set the app title
+st.title("📸🎥🎵 File Uploader: Image, Video, and Audio")
 
-st.subheader('🎞Video:')
-video=open('naruto.1920x1080.mp4','rb')
-video_bytes=video.read()
-st.video(video_bytes)
+st.write("Upload and preview your image, video, or audio files below 👇")
 
-st.subheader('🎧Audio:')
-audio=open('Squid Game Season 2 Mingle Mp3','rb')
-audio_bytes=audio.read()
-st.audio(audio_bytes)
+# --- Image Upload ---
+st.subheader("🖼️ Image Upload")
+image_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png", "gif"])
+
+if image_file is not None:
+    st.image(image_file, caption="Uploaded Image", use_column_width=True)
+
+# --- Video Upload ---
+st.subheader("🎥 Video Upload")
+video_file = st.file_uploader("Choose a video file", type=["mp4", "mov", "avi", "mkv"])
+
+if video_file is not None:
+    st.video(video_file)
+
+# --- Audio Upload ---
+st.subheader("🎵 Audio Upload")
+audio_file = st.file_uploader("Choose an audio file", type=["mp3", "wav", "ogg"])
+
+if audio_file is not None:
+    st.audio(audio_file)
+
+# --- Extra Info ---
+st.write("---")
+st.info("Tip: You can upload one file at a time in each section. Refresh the page to upload again.")
