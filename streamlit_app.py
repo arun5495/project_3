@@ -3,7 +3,7 @@ import streamlit as st
 st.title("📁 Load Local Files")
 
 # Example local paths (change these to match your own)
-image_path = "C:/Users/YourName/Pictures/my_photo.jpg"
+image_path = images.jpg
 video_path = /content/[TCR] Attack On Titan S04 E14 (Tamil).mkv
 audio_path = "C:/Users/YourName/Music/my_song.mp3"
 
