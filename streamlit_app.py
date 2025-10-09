@@ -5,7 +5,7 @@ st.title("📁 Load Local Files")
 # Example local paths (change these to match your own)
 image_path = images.jpg
 video_path = download.jpg
-audio_path =Squid Game Season 2 Ringtone Mingle Mp3 Download - MobCup.Com.Co
+audio_path =audio file
 
 # Display image")
 st.subheader("images.jpg")
@@ -17,6 +17,6 @@ with open(video_path, "rb") as v:
     st.video(v.read())
 
 # Display audio
-st.subheader("Squid Game Season 2 Ringtone Mingle Mp3 Download - MobCup.Com.Co")
+st.subheader("audio file")
 with open(audio_path, "rb") as a:
     st.audio(a.read())
