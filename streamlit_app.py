@@ -1,33 +1,31 @@
-
-%%writefile app.py
 import streamlit as st
 
-st.title("welcome streamlit")
-st.header("this is header")
-st.subheader("this is subheader")
-formula1 = ''' a+b '''
-st.latex(formula1)
-formula = ''' (a+b)2 =  a2+b2+2ab '''
-st.latex(formula)
-python_code = '''
-     a = 9
-     b=4
-     c=78
-     v = a+b+c
-     print(v)
+# Set the app title
+st.title("📸🎥🎵 File Uploader: Image, Video, and Audio")
 
-    '''
-st.code(python_code, language='python')
-st.header("Python")
-st.caption("python is good lang ")
-%%writefile app1.py
-import streamlit as st
-st.image('//content/[TCR] Attack On Titan S04 E14 (Tamil).mkv/While loop.PNG' ,caption = " loop function",width=500)
-st.header("display flower video")
-# loc =open("/content/flower_vid.mp4",'rb')
-# vid_bytes = loc.read()
-# st.video(vid_bytes)
-# st.header("display flower auideo")
-# loc =open("/content/flower_vid.mp4",'rb')
-# vid_bytes = loc.read()
-# st.audio(vid_bytes,format=audio/ogg)
+st.write("Upload and preview your image, video, or audio files below 👇")
+
+# --- Image Upload ---
+st.subheader("flower")
+image_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png", "gif"])
+
+if image_file is not None:
+    st.image(image_file, caption="Uploaded Image", use_column_width=True)
+
+# --- Video Upload ---
+st.subheader("🎥 Video Upload")
+video_file = st.file_uploader("Choose a video file", type=["mp4", "mov", "avi", "mkv"])
+
+if video_file is not None:
+    st.video(video_file)
+
+# --- Audio Upload ---
+st.subheader("🎵 Audio Upload")
+audio_file = st.file_uploader("Choose an audio file", type=["mp3", "wav", "ogg"])
+
+if audio_file is not None:
+    st.audio(audio_file)
+
+# --- Extra Info ---
+st.write("---")
+st.info("Tip: You can upload one file at a time in each section. Refresh the page to upload again.")
