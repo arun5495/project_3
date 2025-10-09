@@ -28,5 +28,5 @@ video_bytes=video.read()
 st.video(video_bytes)
 
 st.subheader('Audio:')
-audio=open('luffy_theme.mp3','rb')
+audio=open('Squid Game Season 2 Mingle Mp3','rb')
 audio_bytes=audio.read()
