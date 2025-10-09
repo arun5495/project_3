@@ -4,7 +4,7 @@ st.title("📁 Load Local Files")
 
 # Example local paths (change these to match your own)
 image_path = images.jpg
-video_path = /content/[TCR] Attack On Titan S04 E14 (Tamil).mkv
+video_path = download.jpg
 audio_path = "C:/Users/YourName/Music/my_song.mp3"
 
 # Display image
