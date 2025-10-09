@@ -1,22 +1,32 @@
 import streamlit as st
 
-st.title("📁 Load Local Files")
+st.title('Streamlit Usage')
 
-# Example local paths (change these to match your own)
-image_path = images.jpg
-video_path = download.jpg
-audio_path =
+st.header('In Mathematics')
+st.subheader('Formula:')
+formula='(a+b)2=a2+b2=2ab'
+st.latex(formula)
 
-# Display image")
-st.subheader("images.jpg")
-st.image(image_path, caption="Local Image", use_column_width=True)
+st.header('In Programming')
+st.subheader('Code Representation:')
+code='''input=input('words:')
+words=input.split(" ")
+emoji_mapping={
+:) : 😃,
+:( : 😞}
+for word in words:
+  output+=emoji_mapping.get(word,word)
+print(output)'''
+st.code(code,language='python')
+st.header('In Media')
+st.subheader('Image:')
+st.image('11020521.jpg',caption = "itachi",width=500)
 
-# Display video
-st.subheader("download.jpg")
-with open(video_path, "rb") as v:
-    st.video(v.read())
+st.subheader('Video:')
+video=open('straw-hat-luffy.1920x1080.mp4','rb')
+video_bytes=video.read()
+st.video(video_bytes)
 
-# Display audio
-st.subheader("")
-with open(audio_path, "rb") as a:
-    st.audio(a.read())
+st.subheader('Audio:')
+audio=open('luffy_theme.mp3','rb')
+audio_bytes=audio.read()
