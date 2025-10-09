@@ -1,31 +1,22 @@
 import streamlit as st
 
-# Set the app title
-st.title("📸🎥🎵 File Uploader: Image, Video, and Audio")
+st.title("📁 Load Local Files")
 
-st.write("Upload and preview your image, video, or audio files below 👇")
+# Example local paths (change these to match your own)
+image_path = "C:/Users/YourName/Pictures/my_photo.jpg"
+video_path = /content/[TCR] Attack On Titan S04 E14 (Tamil).mkv
+audio_path = "C:/Users/YourName/Music/my_song.mp3"
 
-# --- Image Upload ---
-st.subheader("flower")
-image_file = st.file_uploader("Choose an image file", type=["jpg", "jpeg", "png", "gif"])
+# Display image
+st.subheader("🖼️ Image from Local Path")
+st.image(image_path, caption="Local Image", use_column_width=True)
 
-if image_file is not None:
-    st.image(image_file, caption="Uploaded Image", use_column_width=True)
+# Display video
+st.subheader("🎥 Video from Local Path")
+with open(video_path, "rb") as v:
+    st.video(v.read())
 
-# --- Video Upload ---
-st.subheader("🎥 Video Upload")
-video_file = st.file_uploader("Choose a video file", type=["mp4", "mov", "avi", "mkv"])
-
-if video_file is not None:
-    st.video(video_file)
-
-# --- Audio Upload ---
-st.subheader("🎵 Audio Upload")
-audio_file = st.file_uploader("Choose an audio file", type=["mp3", "wav", "ogg"])
-
-if audio_file is not None:
-    st.audio(audio_file)
-
-# --- Extra Info ---
-st.write("---")
-st.info("Tip: You can upload one file at a time in each section. Refresh the page to upload again.")
+# Display audio
+st.subheader("🎵 Audio from Local Path")
+with open(audio_path, "rb") as a:
+    st.audio(a.read())
