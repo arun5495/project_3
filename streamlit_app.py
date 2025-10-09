@@ -4,7 +4,7 @@ st.title('Streamlit Usage✨')
 st.code(code,language='python')
 st.header('In Media💿')
 st.subheader('📸Image:')
-st.image('11020521.jpg',caption = " itachi",width=700)
+st.image('itachi.jpg',caption = " itachi",width=700)
 
 st.subheader('🎞Video:')
 video=open('naruto.1920x1080.mp4','rb')
